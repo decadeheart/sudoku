@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>sudoku</title>
+<link rel="stylesheet" href="game.css"/>
+<script src="game.js" type="text/javascript"></script>
+</head>
+<body class="center boxShadow" onselectstart='return false'>
+
+<div id="header" class="center">
+	<h1 class="textShadow font color center" >S u d o k u</h1>
+    <span class="textShadow font color"> </span>
+</div>
+ 
+<div id="mainArea">
+
+	<div id="gameBoard" class="font color">
+    <h3>数独</h3>
+    <p> 游戏规则：</p>
+    <p>在9x9的方格中，补充好没有填好的空格，使用1~9范围内的数组填充，保证每行每列的都不一样，即可获胜</p>
+    <p>帮助：</p>
+    <p>不同难度的游戏空缺格数不同，另外可以通过计时进行比拼</p>
+
+    </div>
+    
+    <div id="selectBoard" class="radius textShadow font color boxShadow">
+    	
+    </div>
+    
+    <div id="infoBoard" class="font color textShadow">
+            <div id="btnArea">
+            <input type="radio" value="1" name="lv" id="lv1" checked><label for="lv1">简单</label>
+            <input type="radio" value="2" name="lv" id="lv2"><label for="lv2">中等</label>
+            <input type="radio" value="3" name="lv" id="lv3"><label for="lv3">困难</label>
+            <input type="radio" value="4" name="lv" id="lv4"><label for="lv4">超难</label>
+            <br/>
+            <input type="button" value="开始新游戏" onClick="S.init()"/><br/>
+            <input type="button" value="显示答案" onClick="S.gameOver()"/>
+        </div>
+    	<div id="timer">消耗时间：<span id="time">0 min 0 s</span></div>
+
+  	</div>
+</div>
+    
+
+<script src="http://app.baidu.com/static/appstore/monitor.st"></script>
+</body>
+</html>
